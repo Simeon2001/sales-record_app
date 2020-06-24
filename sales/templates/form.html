@@ -1,0 +1,108 @@
+<!DOCTYPE html>  
+<html lang="en">  
+
+<form method="POST" class="post-form">  
+        {% csrf_token %}  
+    <div class="container">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Details</h3>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Client:</label>  
+    <div class="col-sm-4">  
+     <input class="input1" type="text" name="client" {% if form.is_bound %}value="{{ form.client.value }}"{% endif %} placeholder="Name">
+                <span class="shadow-input1"></span>
+                {% for err in form.client.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %} 
+    </div>  
+  </div>  
+
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">End user:</label>  
+    <div class="col-sm-4">  
+     <input class="input1" type="text" name="end_user" {% if form.is_bound %}value="{{ form.end_user.value }}"{% endif %} placeholder="end_user">
+                <span class="shadow-input1"></span>               {% for err in form.end_user.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %}  
+    </div>  
+  </div>  
+  <br>
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Description:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="description" {% if form.is_bound %}value="{{ form.description.value }}"{% endif %} placeholder="description">
+                <span class="shadow-input1"></span>
+                {% for err in form.description.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %} 
+    </div>  
+  </div>  
+<br>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Serial no.:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="model_serial_no" {% if form.is_bound %}value="{{ form.model_serial_no.value }}"{% endif %} placeholder="model_serial_no">
+                <span class="shadow-input1"></span>
+                {% for err in form.model_serial_no.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %}
+    </div>  
+  </div>  
+<br>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Qty:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="qty" {% if form.is_bound %}value="{{ form.qty.value }}"{% endif %} placeholder="qty">
+                <span class="shadow-input1"></span>
+                {% for err in form.qty.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %} 
+    </div>  
+  </div>  
+<br>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Gate Pass:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="gate_pass" {% if form.is_bound %}value="{{ form.gate_pass.value }}"{% endif %} placeholder="gate_pass">
+                <span class="shadow-input1"></span>
+                {% for err in form.gate_pass.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %} 
+    </div>  
+  </div>  
+<br>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Category:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="category" {% if form.is_bound %}value="{{ form.category.value }}"{% endif %} placeholder="category">
+                <span class="shadow-input1"></span>
+                {% for err in form.category.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %} 
+    </div>  
+  </div>  
+<br>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Date:</label>  
+    <div class="col-sm-4">  
+      <input class="input1" type="text" name="sales_date" {% if form.is_bound %}value="{{ form.sales_.value }}"{% endif %} placeholder="sales_date">
+                <span class="shadow-input1"></span>
+                {% for err in form.sales_date.errors %}
+                    <small class="text-danger ml-2">{{ err }}</small><br>
+                {% endfor %}  
+    </div>  
+  </div>  
+<br>
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  

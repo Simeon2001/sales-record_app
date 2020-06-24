@@ -1,0 +1,5 @@
+ <form action="" method="post">
+     {% csrf_token %}
+     <p style="color:red">Are you sure you want to delete "{{ sales.client }}"?</p>
+     <input class="bt btn btn-info" type="submit" value="Confirm" />
+ </form>

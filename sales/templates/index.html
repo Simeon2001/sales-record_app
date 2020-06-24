@@ -1,0 +1,18 @@
+{% for a in ur %}
+{{ a.client }}
+{{ a.end_user }}
+{{ a.description }}
+
+
+
+
+
+
+<a id="danger" href="{% url 'delete' a.pk %}"><button class="btn btn-danger">Delete Sales</button></a>
+
+<a id="danger" href="{% url 'update' a.pk %}"><button class="btn btn-danger">Update Sales</button></a>
+{% endfor %}
+<div>
+<h1>Add New Sales</h1>
+<a  href="{% url 'add' %}"><button style="color:blue">Add New Sales</button></a>
+</div>
